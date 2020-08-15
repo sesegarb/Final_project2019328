@@ -61,7 +61,7 @@
         <div class="row mt-4">
             <div class="col-sm-6">
                 <img src="img/2.jpg" class="img-fluid hero-img" alt="img2">
-            </div>
+         </div>
             
             <div class="col-sm-6">
                 <h3 class="hero-heading">Highly qualified professionals</h3>
@@ -106,7 +106,7 @@
                        <div class="card-title">Repair and Fault</div>
                        <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est recusandae deleniti, maiores laborum similique officia ad aliquam ipsa odio, debitis a quisquam exercitationem eius. Vitae, accusantium! Laudantium repellat, tempora. Autem.</div>
                    </div>
-               </div>
+               <div>
            </div>
            
            <div class="col-md-4">
