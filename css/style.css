@@ -1,0 +1,180 @@
+html,body{
+	height: 100%; width: 100%;
+}
+.my-nav{background-color: rgba(0,0,0,0.70)!important;}
+.my-nav .nav-link{color: #ffffff; font-size: 18px;}
+.my-nav .nav-link:hover{color: yellow;}
+.fa-bars{color: white;}
+
+#home{background-image: url('img/gers-garage.jpg');
+    background-position: center center;
+    background-attachment: fixed; 
+    background-size: cover; width: 100%; height: 100%;}
+
+.landing-text{
+	
+	position: absolute;
+	top: 38%;
+	text-align: center;
+	width: 100%;
+	color: black;
+}
+
+.landingheading1{font-size: 70px; text-transform: capitalize;}
+.landingheading2{font-size: 35px; text-transform: capitalize;}
+
+ /*about session start*/
+.top-heading p{width: 100%; text-align: center; color: #787878; font-size: 70px; text-transform: capitalize;}
+
+.card1,.card2,.card3{text-align: center;
+border: none;
+	border-radius: 0px 30px 0px 30px;
+	box-shadow: -webkit-box-shadow -19px 19px 43px 0px rgba(0,0,0,0.61);
+    -moz-box-shadow: -19px 19px 43px 0px rgba(0,0,0,0.61);
+    box-shadow: -19px 19px 43px 0px rgba(0,0,0,0.61);
+}
+
+.card i{color: yellow; font-size: 60px; margin-top: 25px;}
+
+
+.card .card-title{font-weight: bold; font-size: 25px; color: dimgray;}
+.card .card-text{color: #737373; font-weight: 600;}
+.card1,.card3{background-color: rgba(0,0,0,0.1); transition: 1s;}
+.card1:hover,.card3:hover{background-color: rgba(0,0,0,0.05); transition: 1s;}
+.card2{background-color: rgba(0,0,0,0.05); transition: 1s;}
+.card2:hover{background-color: rgba(0,0,0,0.1); transition: 1s;}
+
+/*about session end*/
+
+/*why u come here start*/
+
+.custom-btn{background-color: white; border-color: yellow; color: dimgray;transition: 1s;}
+.custom-btn:hover{background-color: yellow; border-color: white; color: white;transition: 1s;}
+.bg-gray{background-color: #f0f0f0;}
+.hero-heading{color: rgb(78, 78, 75); font-size: 35px;}
+.hero-paragraph{color: #767676; font-size: 18px;}
+.hero-img{border-radius: 0px 30px 0px 30px;}
+
+/*why u come here end*/
+ 
+/*team start*/
+
+.card-team{border: none}
+.card-team .card-img-top{border-radius: 0px 30px 0px 30px;
+box-shadow: -webkit-box-shadow -18px 17px 50px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: -18px 17px 50px -12px rgba(0,0,0,0.75);
+box-shadow: -18px 17px 50px -12px rgba(0,0,0,0.75);
+}
+
+/*team end*/
+
+/*book start*/
+.proud{background-image: url(img/5.jpg); 
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center center;
+    color: black;
+
+}
+
+/*book end*/
+
+
+/*blog start*/
+
+.card-blog{border: none;}
+.card-blog .card-img-top{border-radius: 0px 30px 0px 30px;}
+
+/*blog end*/
+
+/*footer start*/
+
+footer{background-color: black; color: white; font-size: 20px;}
+
+/*footer end*/
+
+/*--login page start--*/
+
+.login-container{
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-form-2{
+    padding: 5%;
+    background: #0062cc;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+.login-form-2 .btnSubmit{
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+/*--login page end--*/
+
+/*-- bill --*/
+.bill-container{
+    background: #ffffff;
+    border: #a1a1a1 1px solid;
+    padding: 30px;
+    width: 60%;
+    margin: 25px 20%;
+}
+
+.bill-container hr{
+    border: none;
+    border: dashed 1px #4a4e61;
+    margin: 3% auto;
+}
+.bill-container h5{
+    text-align: center;
+}
+
+a.link-back{
+    text-align: center;
+    background-color: rgb(217, 235, 137);
+    color: #ffffff;
+    margin: auto 20%;
+    border-radius: 25px;
+    padding: 10px;
+    
+}
+
+/*-- bill end--*/
