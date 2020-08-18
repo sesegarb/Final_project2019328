@@ -2,7 +2,6 @@
 if (isset($_POST['submit'])) {
     require 'connection.php';
 
-$id = mysqli_real_escape_string($conn, $_POST['id']);
 $name = mysqli_real_escape_string($conn, $_POST['name']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $phone = mysqli_real_escape_string($conn, $_POST['phone']);
@@ -12,7 +11,6 @@ $licence = mysqli_real_escape_string($conn, $_POST['licence']);
 $engine = mysqli_real_escape_string($conn, $_POST['engine']);
 $reason = mysqli_real_escape_string($conn, $_POST['reason']);
 $comments = mysqli_real_escape_string($conn, $_POST['comments']);
-$service = mysqli_real_escape_string($conn, $_POST['service-type']);
 
 // QUERY
 $query = mysqli_query($conn, "INSERT INTO booking(id, usr_name,email,phone_number,vehicle_type,vehicle_make, vehicle_licence_details, vehicle_engine_type, reason_of_reservation, customer_comments, service_type) VALUES('$id', '$name','$email','$phone','$type','$make', '$licence', '$engine', '$reason', '$comments', '$service' ) ");

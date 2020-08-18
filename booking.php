@@ -1,6 +1,4 @@
 <?php 
-
-include('includes/userconf.php');
 session_start();
 ?>
 <!doctype html>
@@ -69,8 +67,6 @@ session_start();
                                 <div class="form-group">
                                  <form class="signup" action="includes/new_booking.php" method="post">
                                     
-                                      <input type="text" class="form-control" name="id" value="<?php echo $_SESSION['id_user'] ?>" style="display: none;">
-                                      <br>
                                       <input type="text" class="form-control" name="name" placeholder="First & Last Name">
                                       <br>
                                       <input type="text" class="form-control" name="email" placeholder="Email Address">
@@ -88,14 +84,6 @@ session_start();
                                       <input type="text" class="form-control" name="reason" placeholder="Reason of reservation">
                                       <br>
                                       <input type="text" class="form-control" name="comments" placeholder="Customer comments">
-                                      <br>
-                                      <select name="service-type"  class="form-control" placeholder="Booking Type">
-                    <option value="default">Service Type</option>
-                    <option value="Repair Fault">Repair/Fault</option>                    
-                    <option value="Major Service">Major Service</option>                    
-                    <option value="Major Repair">Major Repair</option>
-                    <option value="Annual Service">Annual Service</option>
-                </select>
                                       <br>
                                       <input type="submit" class="btn btn-success" name="submit" value="SUBMIT">
                                     
