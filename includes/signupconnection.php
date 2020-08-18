@@ -78,7 +78,7 @@ if (isset($_POST['signup-btn'])) {
           // Then execute the prepared statement and send it to the database
           mysqli_stmt_execute($stmt);
           // send the user back to the signup page with a success message!
-          header("Location: ../login.php?signup=success");
+          header("Location: ../dashboard.php?signup=success");
           exit();
 
         }

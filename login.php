@@ -34,6 +34,18 @@ session_start();
             <li class="nav-item">
               <a class="nav-link " href="login.php">Book Now</a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="dashboard.php">My Orders<span class="sr-only">(current)</span></a>
+            </li>
+            <?php
+            if(isset($_SESSION['id_user'])) {
+                echo '<li class="nav-item">
+                <a class="nav-link " href="includes/logout.php">Log out</a>
+                
+              </li>';
+
+            }
+            ?>
           </ul>
         </div>
       </nav>

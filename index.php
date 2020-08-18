@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,6 +33,19 @@
             <li class="nav-item">
               <a class="nav-link " href="booking.php">Book Now</a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="dashboard.php">My Orders<span class="sr-only">(current)</span></a>
+            </li>
+            <?php
+            if(isset($_SESSION['id_user'])) {
+                echo '<li class="nav-item">
+                <a class="nav-link " href="includes/logout.php">Log out</a>
+                
+              </li>';
+
+            }
+            ?>
+            
           </ul>
         </div>
       </nav>
@@ -41,7 +58,7 @@
     <div id="home" style="background-image: url('img/gers-garage.jpg');">
     <div class="landing-text">
         <p class="landingheading1">Welcome To Ger's Garage</p>
-        <p class="landingheading2 d-none d-sm-block">Ger is a mechanic who runs a small garage. He carries out maintenance checks for all kinds of small to medium vehicles (i.e. motorbikes, cars, small vans and small buses). He has a small number of staff who work with him.</p><br/>
+        <p class="landingheading2 d-none d-sm-block">Ger is a mechanic who runs a small garage.</p><br/>
     </div>
     </div>
 
@@ -70,6 +87,7 @@
                     Our garage is small so that's why we treat everyone as a unique client therefore comes trustworthy relationship.<br>
                     All of our staff are highly qualified and trained.<br/>
                 </p>
+                </p>
             </div>
             
         </div>
@@ -80,47 +98,52 @@
 
 
 <!--services-->
-  
+
+
 <div class="container mb-5">
-    <div class="row top-heading mt-5">
-       <div class="col-md-12">
-           <p>Our services</p>
-       </div>	
-       </div>
-       
-       <div class="row mt-5">
-           <div class="col-md-4">
-               <div class="card card-blog">
-                   <img class="card-img-top img-fluid" src="img/6.jpg">
-                   <div class="card-body">
-                       <div class="card-title">Annual and Major Service</div>
-                       <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est recusandae deleniti, maiores laborum similique officia ad aliquam ipsa odio, debitis a quisquam exercitationem eius. Vitae, accusantium! Laudantium repellat, tempora. Autem.</div>
-                   </div>
-               </div>
-           </div>
-           
-           <div class="col-md-4">
-               <div class="card card-blog">
-                   <img class="card-img-top img-fluid" src="img/7.jpg">
-                   <div class="card-body">
-                       <div class="card-title">Repair and Fault</div>
-                       <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est recusandae deleniti, maiores laborum similique officia ad aliquam ipsa odio, debitis a quisquam exercitationem eius. Vitae, accusantium! Laudantium repellat, tempora. Autem.</div>
-                   </div>
-               <div>
-           </div>
-           
-           <div class="col-md-4">
-               <div class="card card-blog">
-                   <img class="card-img-top img-fluid" src="img/8.jpg">
-                   <div class="card-body">
-                       <div class="card-title">Major Repair</div>
-                       <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est recusandae deleniti, maiores laborum similique officia ad aliquam ipsa odio, debitis a quisquam exercitationem eius. Vitae, accusantium! Laudantium repellat, tempora. Autem.</div>
-                   </div>
-               </div>
-           </div>
-       </div>
-</div>
+     	<div class="row top-heading mt-5">
+        	<div class="col-md-12">
+        		<p>Read Our Blogs To Know Us Better</p>
+        	</div>	
+        	</div>
+        	
+        	<div class="row mt-5">
+        		<div class="col-md-4">
+        			<div class="card card-blog">
+        				<img class="card-img-top img-fluid" src="img/6.jpg">
+        				<div class="card-body">
+        					<div class="card-title">Annual and Major Service</div>
+        					<div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est recusandae deleniti, maiores laborum similique officia ad aliquam ipsa odio, debitis a quisquam exercitationem eius. Vitae, accusantium! Laudantium repellat, tempora. Autem.</div>
+        				</div>
+        			</div>
+        		</div>
+        		
+        		<div class="col-md-4">
+        			<div class="card card-blog">
+        				<img class="card-img-top img-fluid" src="img/7.jpg">
+        				<div class="card-body">
+        					<div class="card-title">Repair and Fault</div>
+        					<div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est recusandae deleniti, maiores laborum similique officia ad aliquam ipsa odio, debitis a quisquam exercitationem eius. Vitae, accusantium! Laudantium repellat, tempora. Autem.</div>
+        				</div>
+        			</div>
+        		</div>
+        		
+        		<div class="col-md-4">
+        			<div class="card card-blog">
+        				<img class="card-img-top img-fluid" src="img/8.jpg">
+        				<div class="card-body">
+        					<div class="card-title">Major Repair</div>
+        					<div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est recusandae deleniti, maiores laborum similique officia ad aliquam ipsa odio, debitis a quisquam exercitationem eius. Vitae, accusantium! Laudantium repellat, tempora. Autem.</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+     </div>
 <!--  services end-->
+
+
+
+
 
 
 <!--team start-->

@@ -149,32 +149,60 @@ footer{background-color: black; color: white; font-size: 20px;}
 }
 /*--login page end--*/
 
-/*-- bill --*/
-.bill-container{
-    background: #ffffff;
-    border: #a1a1a1 1px solid;
-    padding: 30px;
-    width: 60%;
-    margin: 25px 20%;
-}
-
-.bill-container hr{
-    border: none;
-    border: dashed 1px #4a4e61;
-    margin: 3% auto;
-}
-.bill-container h5{
-    text-align: center;
-}
-
-a.link-back{
-    text-align: center;
-    background-color: rgb(217, 235, 137);
-    color: #ffffff;
-    margin: auto 20%;
+/* dashboard start */
+.container-dashboard{
+    border: 1px solid #787878;
     border-radius: 25px;
-    padding: 10px;
+    margin: 15%;
+}
+.container-dashboard .bar{
+    background-color: rgb(121, 116, 109);
+    width: 100%;
+    height: 10%;
+
+}
+.container-dashboard .name-dashboard{
+    
+    float: left;
+    width: 70%;
+    padding-left: 15px;
+}
+.container-dashboard .button-dashboard{
+    float: right;
+
+
+}
+.button-dashboard .book-btn{
+    background: green;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px 15px;
+
+}
+.orders-dashboard{
+    
+    clear: both;
+    padding: 15px;
     
 }
+.orders-dashboard .alert{
+    
+    text-align: center;
 
-/*-- bill end--*/
+}
+.orders-dashboard .order-list table{
+    width: 100%;
+
+
+    
+}
+.orders-dashboard .order-list thead{
+    
+}
+.orders-dashboard .order-list td{
+    border-bottom: 1px solid #333;
+}
+    
+/* dash end */

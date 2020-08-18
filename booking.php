@@ -1,6 +1,7 @@
 <?php 
-session_start();
+
 include('includes/userconf.php');
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -33,24 +34,25 @@ include('includes/userconf.php');
             <li class="nav-item">
               <a class="nav-link " href="login.php">Book Now</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link " href="includes/logout.php">Log Out</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="dashboard.php">My Orders<span class="sr-only">(current)</span></a>
             </li>
+            <?php
+            if(isset($_SESSION['id_user'])) {
+                echo '<li class="nav-item">
+                <a class="nav-link " href="includes/logout.php">Log out</a>
+                
+              </li>';
+
+            }
+            ?>
+            
           </ul>
         </div>
       </nav>
          
     <!-- navbar end-->
-    <?php
-        if (isset($_SESSION['id'])) {
-
-            echo '<li><a href="userdash.php"><i class="fa fa-user-o" aria-hidden="true"></i>My Account</a></li>';
-            echo '<li><a href="includes/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>';
-          } else {
-            echo '<li><a href="userdash.php"><i class="fa fa-user-o" aria-hidden="true"></i>My Account</a></li>';
-            }
-
-            ?>
+    
 
 
     <!--booking page start-->
@@ -67,6 +69,8 @@ include('includes/userconf.php');
                                 <div class="form-group">
                                  <form class="signup" action="includes/new_booking.php" method="post">
                                     
+                                      <input type="text" class="form-control" name="id" value="<?php echo $_SESSION['id_user'] ?>" style="display: none;">
+                                      <br>
                                       <input type="text" class="form-control" name="name" placeholder="First & Last Name">
                                       <br>
                                       <input type="text" class="form-control" name="email" placeholder="Email Address">
@@ -84,6 +88,14 @@ include('includes/userconf.php');
                                       <input type="text" class="form-control" name="reason" placeholder="Reason of reservation">
                                       <br>
                                       <input type="text" class="form-control" name="comments" placeholder="Customer comments">
+                                      <br>
+                                      <select name="service-type"  class="form-control" placeholder="Booking Type">
+                    <option value="default">Service Type</option>
+                    <option value="Repair Fault">Repair/Fault</option>                    
+                    <option value="Major Service">Major Service</option>                    
+                    <option value="Major Repair">Major Repair</option>
+                    <option value="Annual Service">Annual Service</option>
+                </select>
                                       <br>
                                       <input type="submit" class="btn btn-success" name="submit" value="SUBMIT">
                                     

@@ -55,18 +55,11 @@ if (isset($_POST['login-btn'])) {
           $_SESSION['id_user'] = $row['id'];
           $_SESSION['name'] = $row['name_user'];
           $_SESSION['email'] = $row['email_user'];
-          $_SESSION['phone'] = $row['phone_user'];
-          $_SESSION['vehicleType'] = $row['vehicle_type'];
-          $_SESSION['vehicleMake'] = $row['vehicle_make'];
-          $_SESSION['vehicleEngine'] = $row['vehicle_engine'];
-          $_SESSION['address'] = $row['address_user'];
-          $_SESSION['service_type'] = $row['service_type'];
-          $_SESSION['licence'] = $row['l_details'];
-
+          
           
 
           // Now the user is registered as logged in and we can now take them back to the front page
-          header("Location: ../dash.php?login=success");
+          header("Location: ../dashboard.php?login=success");
           exit();
         }
       }

@@ -1,10 +1,8 @@
 <?php
 session_start();
+include('includes/connection.php');
 include('includes/userconf.php');
-include_once 'includes/connection.php';
-
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -17,7 +15,7 @@ include_once 'includes/connection.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Ger's garage dashboard</title>
+    <title>Ger's garage web</title>
   </head>
   <body>
 
@@ -37,27 +35,108 @@ include_once 'includes/connection.php';
             <li class="nav-item">
               <a class="nav-link " href="booking.php">Book Now</a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="dashboard.php">My Orders<span class="sr-only">(current)</span></a>
+            </li>
+            <?php
+            if(isset($_SESSION['id_user'])) {
+                echo '<li class="nav-item">
+                <a class="nav-link " href="includes/logout.php">Log out</a>
+                
+              </li>';
+
+            }
+            ?>
+            
           </ul>
         </div>
       </nav>
          
     <!-- navbar end-->
+    
+    <div class="container-dashboard">
+        <div class="bar">
+            <div class="name-dashboard">
+                <h2>
+                    <?php
+                    if (isset($_SESSION['name'])){
+                        echo $_SESSION['name'];
 
-    <?php
-            if (isset($_SESSION['id'])) {
+                    }
+                ?>
+                </h2>
 
-                echo '<li><a href="dash.php"><i class="fa fa-user-o" aria-hidden="true"></i>My Account</a></li>';
-                echo '<li><a href="includes/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>';
-            } else {
-                echo '<li><a href="dash.php"><i class="fa fa-user-o" aria-hidden="true"></i>My Account </a></li>';
+            </div>
+            <div class="button-dashboard">
+                <a href="booking.php" class="book-btn">New reservation</a>
+
+
+            </div>
+        </div>
+        <div class="orders-dashboard">
+            
+        
+            
+            
+            
+         <?php
+         $id = $_SESSION['id_user'];
+        $sql = "SELECT * FROM booking WHERE id = $id;"; 
+        $query = mysqli_query($conn, $sql);
+        $britney = mysqli_num_rows($query);
+        if ($britney > 0) {
+
+            echo '<div class="order-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Booking No </th>
+                        <th>Name</th>
+                        <th>Car</th>
+                        <th>Licence</th>
+                        <th>Problem</th>
+                        <th>Comment</th>
+                        <th>Service Type</th>
+                        
+                    </tr>
+                </thead>';
+
+            while ($row = mysqli_fetch_assoc($query)) {
+                echo '<tbody>
+                <tr>
+                    <td> '.$row['booking_id'].' </td>
+                    <td> '.$row['usr_name'].' </td>
+                    <td> '.$row['vehicle_make'].' </td>
+                    <td> '.$row['vehicle_licence_details'].' </td>
+                    <td> '.$row['reason_of_reservation'].' </td>
+                    <td> '.$row['customer_comments'].' </td>
+                    <td> '.$row['service_type'].' </td>
+                    
+                </tr>
+            </tbody>';
             }
+        } else{
+            echo '<div class="alert">
+            <h3>
+                No orders yet. Book now. 
+            </h3>
+            <a href="booking.php" class="book-btn">New reservation</a>
+        </div>';
+        }
 
-            ?>
+
+        ?>
+
+                    
+                </table>
+                
+            </div>
+
+        </div>
+    </div>
 
 
-
-
-<!--footer start-->
+    <!--footer start-->
 <footer class="container-fluid">
     <div class="container pt-3 pb-3">
         <div class="row">
